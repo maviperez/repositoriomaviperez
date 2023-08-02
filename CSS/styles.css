@@ -2,7 +2,7 @@
     font-family: 'Roboto', sans-serif;
     padding: 0px;
     margin: 0px;
-    box-sizing: 0px;
+    box-sizing: border-box;
 }
 ul {
     display: flex; 
@@ -25,24 +25,24 @@ li {
 }
 .headerhome {
     height: 500px;
+    max-height: 100vh;
     background-image: url(../Multimedia/Imagenes/header\ home.jpg);
     background-size: cover;
-    overflow: hiddin;
+    overflow: hidden;
 }
 .headertratamientos {
     height: 300px;
     background-image: url(../Multimedia/Imagenes/headertratamiento.jpg);
     background-size: cover;
-    overflow: hiddin;
+    overflow: hidden;
 }
 .headercontactanos {
     height: 300px;
     background-image: url(../Multimedia/Imagenes/headercontactanos.jpg);
     background-size: cover;
-    overflow: hiddin;
+    overflow: hidden;
 }
-IMG {
-    width: 2OOpx;
+img {
     height: 200px;
 }
 .SeccionCuadroInfo {
@@ -51,12 +51,26 @@ IMG {
     justify-content: center;
     margin: 20px;
 }
+@media screen and (max-width: 768px) {
+    .SeccionCuadroInfo {
+      flex-direction: column;
+    }
+    /*Estilos para centrar verticalmente el contenido */
+    .SeccionCuadroInfo:before {
+        content: '';
+        flex: 1 0 auto;
+  }
+
+    .SeccionCuadroInfo:after {
+        content: '';
+        flex: 1 0 auto;
+  }
+}
 .ImgCuadroInfo{
     display: flex;
     justify-content: center;
 }
 .FotoCuadro {
-    width: 4OOpx;
     height: 400px;
 }
 .Informacion {
@@ -65,19 +79,13 @@ IMG {
     margin: 5px 0px 0px 0px;
     padding: 20px;
 }
-.Leermas{
-    background-color: #000;
-    color: white;
-    padding: 5px;
-    margin: 5px 0px;
-}
 .CuadroInfo {
-    width: 340px;
+    width: 440px;
     padding: 10px;
     border: solid 2px black;
     background-color: white;
-    line-height: 23px;
-    height: 220px;
+    line-height: 25px;
+    height: 265px;
 }
 .opcionestratamientos {
     display: flex;
@@ -89,8 +97,8 @@ IMG {
     justify-content: center;
     padding: 20px;
 }
-.Centroestetica h2 {
-    padding: 10px 0px;
+.CuadroInfo h2 {
+    padding: 10px 0px;;
 }
 .tratamientos {
     display: flex;
@@ -113,71 +121,115 @@ IMG {
     text-align: center;
     align-items: center;
 }
-.buttomvermasproductos {
+.buttonvermasproductos {
     display: flex;
     justify-content: center;
     padding:30px;
 }
-.vermasproductos {
+.ButtonBlack {
     background-color: #000;
     color: white;
-    width: 70px;
     text-align: center;
     margin-bottom: 20px;
-}
-.enviar{
-    margin-bottom: 3px;
-    background-color: #000;
-    color: white;
-}
-form {
-    border: solid 3px white;
-    background-color: white;
-    color: black;
-    width: 500px;
-    overflow: hidden;
-}
-.Horarios {
-    background-color: grey;
-    color: white;
-    width: 200px;
-    padding: 20px 20px 80px;
-    text-align: center;
-    position: relative;
-   
-
-}
-.enviar{
-    padding:3px;
+    padding: 5px;
+    margin: 10px 0px;
 }
 .formulario {
-    height: 500px;
-    background-color: #000;
+    position: relative;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-}
-.Horarios {
-    left: 300px;
-    height: 150px;
+    justify-content: center;
+    background-color: black;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .Horarios,
+  .DatosContacto {
+    color: white;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .Horarios {
+    background-color: grey;
+    margin-right: 5px;
     line-height: 30px;
-}
-.DatosContacto {
-    padding: 30px;
-    position:relative;
-    left: 300px;
-    height: 300px;
-}
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}  
+  .DatosContacto {
+    background-color: white;
+    width: calc(50% - 5px);
+    color:black;
+  }
+  .DatosContacto input,
+  .DatosContacto textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .DatosContacto h2 {
+    margin-bottom: 10px;
+  }
+  
+  .ButtonBlack {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  /* Media query para que el diseño se adapte en dispositivos móviles */
+  @media (max-width: 768px) {
+    .formulario {
+      flex-direction: column;
+    }
+  
+    .Horarios,
+    .DatosContacto {
+      width: 100%;
+      position: static;
+      transform: none;
+      margin-bottom: 20px;
+    }
+  }
+  
 .footerlogo{
     width: 200px;
     height: 100px;
 }
 footer {
-    background-color: #d6d6d6;
-    color: black;
-    padding: 10px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    column-gap: 10 px;
-}
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    text-align: left;
+  }
+  
+  .footerlogo,
+  .visitanos,
+  .contacto,
+  iframe {
+    display: flex;
+    flex-direction: column; 
+    margin-top: 20px;
+    text-align: left;
 
+}
+@media screen and (max-width: 768px) {
+    footer {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    
+    .footerlogo {
+      order: 1; /* Cambia el orden del footerlogo en dispositivos móviles (fila 2) */
+    }
+    .contacto {
+      order:2;
+    }
+}
