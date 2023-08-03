@@ -1,235 +1,241 @@
-*{ 
-    font-family: 'Roboto', sans-serif;
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
+@charset "UTF-8";
+* {
+  font-family: "Roboto", sans-serif;
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
 }
-ul {
-    display: flex; 
-    color: black;
-    display: flex;
-    justify-content: center;
-}
-li {
-    list-style: none;
-    padding: 20px;
-    margin: 0px 15px;
-    color: black;
-}
-.preheader {
-    display: flex;
-    justify-content: center;
-}
-.imgpreheader {
-    height: 50px;
-}
-.headerhome {
-    height: 500px;
-    max-height: 100vh;
-    background-image: url(../Multimedia/Imagenes/header\ home.jpg);
-    background-size: cover;
-    overflow: hidden;
-}
-.headertratamientos {
-    height: 300px;
-    background-image: url(../Multimedia/Imagenes/headertratamiento.jpg);
-    background-size: cover;
-    overflow: hidden;
-}
-.headercontactanos {
-    height: 300px;
-    background-image: url(../Multimedia/Imagenes/headercontactanos.jpg);
-    background-size: cover;
-    overflow: hidden;
-}
-img {
-    height: 200px;
-}
-.SeccionCuadroInfo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 20px;
-}
-@media screen and (max-width: 768px) {
-    .SeccionCuadroInfo {
-      flex-direction: column;
-    }
-    /*Estilos para centrar verticalmente el contenido */
-    .SeccionCuadroInfo:before {
-        content: '';
-        flex: 1 0 auto;
-  }
 
-    .SeccionCuadroInfo:after {
-        content: '';
-        flex: 1 0 auto;
+ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+}
+ul li a {
+  padding: 20px;
+  margin: 0px 15px;
+  color: black;
+  display: block;
+  color: rgba(0, 0, 0, 0.822);
+  text-decoration: none;
+  font-size: 24p;
+}
+ul li a:hover {
+  color: black;
+}
+
+.preheader {
+  display: flex;
+  justify-content: center;
+}
+.preheader .imgpreheader {
+  height: 50px;
+}
+
+.headerhome {
+  height: 500px;
+  max-height: 100vh;
+  background-image: url(../Multimedia/Imagenes/header\ home.jpg);
+  background-size: cover;
+  overflow: hidden;
+}
+
+.headertratamientos {
+  height: 300px;
+  background-image: url(../Multimedia/Imagenes/headertratamiento.jpg);
+  background-size: cover;
+  overflow: hidden;
+}
+
+.headercontactanos {
+  height: 300px;
+  background-image: url(../Multimedia/Imagenes/headercontactanos.jpg);
+  background-size: cover;
+  overflow: hidden;
+}
+
+.SeccionCuadroInfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+.SeccionCuadroInfo .ImgCuadroInfo {
+  display: flex;
+  justify-content: center;
+}
+.SeccionCuadroInfo .FotoCuadro {
+  height: 400px;
+}
+.SeccionCuadroInfo .CuadroInfo {
+  width: 440px;
+  padding: 10px;
+  border: solid 2px black;
+  background-color: white;
+  line-height: 25px;
+  height: 265px;
+}
+.SeccionCuadroInfo h2 {
+  padding: 10px 0px;
+}
+
+@media screen and (max-width: 768px) {
+  .SeccionCuadroInfo {
+    flex-direction: column;
   }
-}
-.ImgCuadroInfo{
-    display: flex;
-    justify-content: center;
-}
-.FotoCuadro {
-    height: 400px;
+  /*Estilos para centrar verticalmente el contenido */
+  .SeccionCuadroInfo:before {
+    content: "";
+    flex: 1 0 auto;
+  }
+  .SeccionCuadroInfo:after {
+    content: "";
+    flex: 1 0 auto;
+  }
 }
 .Informacion {
-    background-color: black;
-    color: white;
-    margin: 5px 0px 0px 0px;
-    padding: 20px;
+  background-color: black;
+  color: white;
+  margin: 5px 0px 0px 0px;
+  padding: 20px;
 }
-.CuadroInfo {
-    width: 440px;
-    padding: 10px;
-    border: solid 2px black;
-    background-color: white;
-    line-height: 25px;
-    height: 265px;
-}
-.opcionestratamientos {
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
-}
-.facial {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-}
-.CuadroInfo h2 {
-    padding: 10px 0px;;
-}
-.tratamientos {
-    display: flex;
-    justify-content: center;
-    padding:30px;
-}
-.ConjuntoDeProductos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    padding: 0px 0px 70px 0px;
 
+.opcionestratamientos {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
 }
-.ProductoIndividual{
-    margin: 10px;
-    height: 230px;
-    width: 260px;
-    border: solid 2px #000;
-    overflow: hidden;
-    text-align: center;
-    align-items: center;
+
+.facial {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
 }
+
+.tratamientos {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+
+.ConjuntoDeProductos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 0px 0px 70px 0px;
+}
+.ConjuntoDeProductos .ProductoIndividual {
+  margin: 10px;
+  height: 230px;
+  width: 260px;
+  border: solid 2px #000;
+  overflow: hidden;
+  text-align: center;
+  align-items: center;
+}
+.ConjuntoDeProductos img {
+  height: 200px;
+}
+
 .buttonvermasproductos {
-    display: flex;
-    justify-content: center;
-    padding:30px;
+  display: flex;
+  justify-content: center;
+  padding: 30px;
 }
+
 .ButtonBlack {
-    background-color: #000;
-    color: white;
-    text-align: center;
-    margin-bottom: 20px;
-    padding: 5px;
-    margin: 10px 0px;
+  background-color: #000;
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 5px;
+  margin: 10px 0px;
 }
+
 .formulario {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    background-color: black;
-    padding: 20px;
-    box-sizing: border-box;
-  }
-  
-  .Horarios,
-  .DatosContacto {
-    color: white;
-    padding: 20px;
-    position: relative;
-    z-index: 1;
-  }
-  
-  .Horarios {
-    background-color: grey;
-    margin-right: 5px;
-    line-height: 30px;
-    display: flex;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.formulario .Horarios, .formulario .DatosContacto {
+  color: white;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+}
+.formulario .Horarios {
+  background-color: grey;
+  margin-right: 5px;
+  line-height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.formulario .DatosContacto {
+  background-color: white;
+  width: calc(50% - 5px);
+  color: black;
+}
+.formulario input, .formulario textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.formulario h2 {
+  margin-bottom: 10px;
+}
+.formulario .ButtonBlack {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* Media query para que el diseño se adapte en dispositivos móviles */
+@media (max-width: 768px) {
+  .formulario {
     flex-direction: column;
-    justify-content: center;
-    text-align: center;
-}  
-  .DatosContacto {
-    background-color: white;
-    width: calc(50% - 5px);
-    color:black;
   }
-  .DatosContacto input,
-  .DatosContacto textarea {
-    display: block;
+  .Horarios, .DatosContacto {
     width: 100%;
-    margin-bottom: 10px;
+    position: static;
+    transform: none;
+    margin-bottom: 20px;
   }
-  
-  .DatosContacto h2 {
-    margin-bottom: 10px;
-  }
-  
-  .ButtonBlack {
-    background-color: black;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-  }
-  
-  /* Media query para que el diseño se adapte en dispositivos móviles */
-  @media (max-width: 768px) {
-    .formulario {
-      flex-direction: column;
-    }
-  
-    .Horarios,
-    .DatosContacto {
-      width: 100%;
-      position: static;
-      transform: none;
-      margin-bottom: 20px;
-    }
-  }
-  
-.footerlogo{
-    width: 200px;
-    height: 100px;
 }
 footer {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    text-align: left;
-  }
-  
-  .footerlogo,
-  .visitanos,
-  .contacto,
-  iframe {
-    display: flex;
-    flex-direction: column; 
-    margin-top: 20px;
-    text-align: left;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  text-align: left;
+}
+footer .footerlogo {
+  width: 200px;
+  height: 100px;
+}
+footer .footerlogo, footer .visitanos, footer .contacto, footer iframe {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  text-align: left;
+}
 
-}
 @media screen and (max-width: 768px) {
-    footer {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-    }
-    
-    .footerlogo {
-      order: 1; /* Cambia el orden del footerlogo en dispositivos móviles (fila 2) */
-    }
-    .contacto {
-      order:2;
-    }
+  footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .footerlogo {
+    order: 1; /* Cambia el orden del footerlogo en dispositivos móviles (fila 2) */
+  }
+  .contacto {
+    order: 2;
+  }
 }
+
+/*# sourceMappingURL=styles.css.map */

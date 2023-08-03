@@ -1,0 +1,25 @@
+footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    text-align: left;
+    .footerlogo{
+        width: 200px;
+        height: 100px;}
+    .footerlogo, .visitanos, .contacto, iframe {
+    display: flex;
+    flex-direction: column; 
+    margin-top: 20px;
+    text-align: left; }
+}
+@media screen and (max-width: 768px) {
+    footer {
+      display: grid;
+      grid-template-columns: 1fr 1fr; }    
+    .footerlogo {
+      order: 1; /* Cambia el orden del footerlogo en dispositivos móviles (fila 2) */}
+    .contacto {
+      order:2;}
+}
+
+

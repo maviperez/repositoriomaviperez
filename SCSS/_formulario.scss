@@ -1,0 +1,48 @@
+.formulario {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    padding: 20px;
+    box-sizing: border-box;
+    .Horarios,.DatosContacto {
+      color: white;
+      padding: 20px;
+      position: relative;
+      z-index: 1;}
+    .Horarios {
+        background-color: grey;
+        margin-right: 5px;
+        line-height: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;}
+    .DatosContacto {
+        background-color: white;
+        width: calc(50% - 5px);
+        color:black;
+    }input, textarea {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+    }h2 {
+        margin-bottom: 10px; }
+    .ButtonBlack {
+        background-color: black;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer; }
+}
+
+  /* Media query para que el diseño se adapte en dispositivos móviles */
+  @media (max-width: 768px) {
+    .formulario {
+      flex-direction: column;}
+    .Horarios, .DatosContacto {
+      width: 100%;
+      position: static;
+      transform: none;
+      margin-bottom: 20px; }
+  }
