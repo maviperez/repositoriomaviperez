@@ -36,13 +36,22 @@
         cursor: pointer; }
 }
 
-  /* Media query para que el diseño se adapte en dispositivos móviles */
-  @media (max-width: 768px) {
-    .formulario {
-      flex-direction: column;}
-    .Horarios, .DatosContacto {
-      width: 100%;
+@media (max-width: 768px) {
+  .formulario {
+      flex-direction: column;
+  }
+  
+  .Horarios {
+      width: calc(100% - 10px); /* Ancho para Horarios */
       position: static;
       transform: none;
-      margin-bottom: 20px; }
+      margin-bottom: 20px;
   }
+  
+  .DatosContacto {
+      width: calc(10% - 10px); /* Mismo ancho que Horarios */
+      position: static;
+      transform: none;
+      margin-bottom: 20px;
+  }
+}

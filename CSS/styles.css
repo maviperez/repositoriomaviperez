@@ -79,7 +79,7 @@ ul li a:hover {
   padding: 10px 0px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1002px) {
   .SeccionCuadroInfo {
     flex-direction: column;
   }
@@ -127,8 +127,7 @@ ul li a:hover {
 .ConjuntoDeProductos .ProductoIndividual {
   margin: 10px;
   height: 230px;
-  width: 260px;
-  border: solid 2px #000;
+  width: 300px;
   overflow: hidden;
   text-align: center;
   align-items: center;
@@ -196,13 +195,18 @@ ul li a:hover {
   cursor: pointer;
 }
 
-/* Media query para que el diseño se adapte en dispositivos móviles */
 @media (max-width: 768px) {
   .formulario {
     flex-direction: column;
   }
-  .Horarios, .DatosContacto {
-    width: 100%;
+  .Horarios {
+    width: calc(100% - 10px); /* Ancho para Horarios */
+    position: static;
+    transform: none;
+    margin-bottom: 20px;
+  }
+  .DatosContacto {
+    width: calc(10% - 10px); /* Mismo ancho que Horarios */
     position: static;
     transform: none;
     margin-bottom: 20px;
