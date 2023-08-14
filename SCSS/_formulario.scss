@@ -49,9 +49,8 @@
   }
   
   .DatosContacto {
-      width: calc(10% - 10px); /* Mismo ancho que Horarios */
-      position: static;
-      transform: none;
-      margin-bottom: 20px;
+    width: 100px; /* Cambia el ancho en pantallas pequeñas */
+    margin-top: 10px; /* Agrega margen superior para separación */
+    margin-right: 0;
   }
 }

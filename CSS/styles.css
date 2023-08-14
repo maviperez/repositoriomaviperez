@@ -24,6 +24,34 @@ ul li a:hover {
   color: black;
 }
 
+nav .menu {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  nav {
+    display: flex;
+    justify-content: space-between;
+  }
+  nav .menu {
+    display: block;
+    font-size: 25px;
+    margin: 10px;
+    order: -1;
+  }
+  nav ul {
+    position: fixed;
+    top: 0;
+    left: -500px;
+    background-color: white;
+    width: 80vh;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding-top: 100px;
+  }
+}
 .preheader {
   display: flex;
   justify-content: center;
@@ -206,10 +234,9 @@ ul li a:hover {
     margin-bottom: 20px;
   }
   .DatosContacto {
-    width: calc(10% - 10px); /* Mismo ancho que Horarios */
-    position: static;
-    transform: none;
-    margin-bottom: 20px;
+    width: 100px; /* Cambia el ancho en pantallas pequeñas */
+    margin-top: 10px; /* Agrega margen superior para separación */
+    margin-right: 0;
   }
 }
 footer {
@@ -227,6 +254,14 @@ footer .footerlogo, footer .visitanos, footer .contacto, footer iframe {
   flex-direction: column;
   margin-top: 20px;
   text-align: left;
+}
+footer .redes {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Centra verticalmente en la parte inferior */
+  align-conten: flex-end; /* Centra horizontalmente */
+  margin-top: auto; /* Empuja "redes" hacia la parte inferior */
+  margin-bottom: 20px; /* Agrega margen inferior de 20px */
 }
 
 @media screen and (max-width: 768px) {

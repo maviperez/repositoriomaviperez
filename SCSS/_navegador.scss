@@ -14,3 +14,34 @@ ul {
         color:black;
         }}
 }
+nav .menu {
+    display: none;
+ }
+@media (max-width: 768px) {
+    nav { 
+        display: flex;
+        justify-content: space-between;
+
+    }
+    nav .menu {
+        display: block;
+        font-size: 25px;
+        margin: 10px;
+        order: -1;
+    }
+    nav ul {
+        position: fixed;
+        top: 0;
+        left: -500px;
+        background-color: white;
+        width: 80vh;
+        height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        padding-top: 100px;
+
+    }
+    
+
+}
