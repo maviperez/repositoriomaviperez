@@ -18,10 +18,9 @@
         flex-direction: column;
         justify-content: center;
         text-align: center;}
-    .DatosContacto {
+    .Recuadrocontactanos {
         background-color: white;
         width: calc(50% - 5px);
-        color:black;
     }input, textarea {
       display: block;
       width: 100%;
@@ -34,23 +33,21 @@
         border: none;
         padding: 10px 20px;
         cursor: pointer; }
+    .DatosContacto{
+      color:black;
+    }
 }
 
 @media (max-width: 768px) {
   .formulario {
-      flex-direction: column;
-  }
+      flex-direction: column; }
   
   .Horarios {
-      width: calc(100% - 10px); /* Ancho para Horarios */
-      position: static;
+     width: calc(100% - 10px);
       transform: none;
-      margin-bottom: 20px;
-  }
-  
-  .DatosContacto {
-    width: 100px; /* Cambia el ancho en pantallas pequeñas */
-    margin-top: 10px; /* Agrega margen superior para separación */
-    margin-right: 0;
-  }
+      margin-bottom: 20px; }
+  .Recuadrocontactanos {
+    width: 100%;
+    transform: none;
+    margin-bottom: 20px;}
 }

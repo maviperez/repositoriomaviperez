@@ -202,10 +202,9 @@ nav .menu {
   justify-content: center;
   text-align: center;
 }
-.formulario .DatosContacto {
+.formulario .Recuadrocontactanos {
   background-color: white;
   width: calc(50% - 5px);
-  color: black;
 }
 .formulario input, .formulario textarea {
   display: block;
@@ -222,21 +221,23 @@ nav .menu {
   padding: 10px 20px;
   cursor: pointer;
 }
+.formulario .DatosContacto {
+  color: black;
+}
 
 @media (max-width: 768px) {
   .formulario {
     flex-direction: column;
   }
   .Horarios {
-    width: calc(100% - 10px); /* Ancho para Horarios */
-    position: static;
+    width: calc(100% - 10px);
     transform: none;
     margin-bottom: 20px;
   }
-  .DatosContacto {
-    width: 100px; /* Cambia el ancho en pantallas pequeñas */
-    margin-top: 10px; /* Agrega margen superior para separación */
-    margin-right: 0;
+  .Recuadrocontactanos {
+    width: 100%;
+    transform: none;
+    margin-bottom: 20px;
   }
 }
 footer {
@@ -259,7 +260,7 @@ footer .redes {
   display: flex;
   flex-direction: column;
   justify-content: flex-end; /* Centra verticalmente en la parte inferior */
-  align-conten: flex-end; /* Centra horizontalmente */
+  align-content: flex-end; /* Centra horizontalmente */
   margin-top: auto; /* Empuja "redes" hacia la parte inferior */
   margin-bottom: 20px; /* Agrega margen inferior de 20px */
 }
